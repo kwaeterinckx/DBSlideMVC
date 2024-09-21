@@ -18,7 +18,11 @@ namespace DBSlide_BLL.Entities
         {
             get
             {
-                return (FirstName.Substring(0, 1) + LastName.Replace(" ", "").Substring(0, 7)).ToLower();
+                string firstName = FirstName.Substring(0, 1);
+                string lastName = LastName.Replace(" ", "");
+                if (lastName.Length > 7)
+                    lastName = lastName.Substring(0, 7);
+                return (firstName + lastName).ToLower();
             }
         }
         public int SectionId { get; set; }

@@ -7,4 +7,14 @@
     <RootNamespace>DBSlide_MVC</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DBSlide-BLL\DBSlide-BLL.csproj" />
+    <ProjectReference Include="..\DBSlide-Common\DBSlide-Common.csproj" />
+    <ProjectReference Include="..\DBSlide-DAL\DBSlide-DAL.csproj" />
+  </ItemGroup>
+
 </Project>
