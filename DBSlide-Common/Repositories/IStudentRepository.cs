@@ -8,7 +8,7 @@ namespace DBSlide_Common.Repositories
     public interface IStudentRepository<TStudent> where TStudent : IStudent
     {
         #region Create
-
+        public int Insert(TStudent student);
         #endregion
 
         #region Read
@@ -17,11 +17,11 @@ namespace DBSlide_Common.Repositories
         #endregion
 
         #region Update
-
+        public int Update(TStudent student);
         #endregion
 
         #region Delete
-
+        public void Delete(int studentId);
         #endregion
     }
 }

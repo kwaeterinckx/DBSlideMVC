@@ -33,6 +33,18 @@ namespace DBSlide_MVC.Mapper
                 CourseId = student.CourseId
             };
         }
+        public static BLL.Student ToBLL(this StudentInsertModel model)
+        {
+            if (model is null) throw new ArgumentNullException(nameof(model));
+
+            return new BLL.Student(model.FirstName, model.LastName, model.BirthDate, model.SectionId, model.YearResult, model.CourseId);
+        }
+        public static BLL.Student ToBLL(this StudentDetailsModel model)
+        {
+            if (model is null) throw new ArgumentNullException(nameof(model));
+
+            return new BLL.Student(model.StudentId, model.FirstName, model.LastName, model.BirthDate, model.SectionId, model.YearResult, model.CourseId);
+        }
         #endregion
     }
 }

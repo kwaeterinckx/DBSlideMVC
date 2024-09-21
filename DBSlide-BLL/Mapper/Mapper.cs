@@ -15,6 +15,22 @@ namespace DBSlide_BLL.Mapper
 
             return new BLL.Student(student);
         }
+        public static DAL.Student ToDAL(this BLL.Student student)
+        {
+            if (student is null) throw new ArgumentNullException(nameof(student));
+
+            return new DAL.Student()
+            {
+                StudentId = student.StudentId,
+                FirstName = student.FirstName,
+                LastName = student.LastName,
+                BirthDate = student.BirthDate,
+                Login = student.Login,
+                SectionId = student.SectionId,
+                YearResult = student.YearResult,
+                CourseId = student.CourseId
+            };
+        }
         #endregion
     }
 }

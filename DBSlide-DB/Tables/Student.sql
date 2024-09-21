@@ -9,5 +9,6 @@
   [CourseId] NVARCHAR(6),
   CONSTRAINT PK_Student PRIMARY KEY ([StudentId]),
   CONSTRAINT FK_Student_Section FOREIGN KEY ([SectionId]) REFERENCES [Section]([SectionId]),
-  CONSTRAINT FK_Student_Course FOREIGN KEY ([CourseId]) REFERENCES [Course]([CourseId])
+  CONSTRAINT FK_Student_Course FOREIGN KEY ([CourseId]) REFERENCES [Course]([CourseId]),
+  CONSTRAINT CK_Student_YearResult CHECK ([YearResult] BETWEEN 0 AND 20)
 )

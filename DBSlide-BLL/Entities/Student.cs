@@ -38,7 +38,16 @@ namespace DBSlide_BLL.Entities
             YearResult = yearResult;
             CourseId = courseId;
         }
-
+        public Student(int studentId, string firstName, string lastName, DateTime birthDate, int sectionId, int? yearResult, string? courseId)
+        {
+            StudentId = studentId;
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDate = birthDate;
+            SectionId = sectionId;
+            YearResult = yearResult;
+            CourseId = courseId;
+        }
         public Student(DAL.Student student)
         {
             StudentId = student.StudentId;

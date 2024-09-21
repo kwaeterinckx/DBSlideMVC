@@ -68,6 +68,9 @@
     <Build Include="Tables\Grade.sql" />
     <Build Include="StoredProcedures\SP_Student_GetAll.sql" />
     <Build Include="StoredProcedures\SP_Student_GetById.sql" />
+    <Build Include="StoredProcedures\SP_Student_Create.sql" />
+    <Build Include="StoredProcedures\SP_Student_Delete.sql" />
+    <Build Include="StoredProcedures\SP_Student_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InitialData.sql" />
