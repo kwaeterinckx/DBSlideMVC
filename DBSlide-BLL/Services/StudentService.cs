@@ -18,6 +18,13 @@ namespace DBSlide_BLL.Services
             _StudentService = studentService;
         }
 
+        #region LOGIN
+        public string? Login(string login)
+        {
+            return _StudentService.Login(login);
+        }
+        #endregion
+
         #region CREATE
         public int Insert(Student student)
         {

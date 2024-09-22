@@ -7,6 +7,10 @@ namespace DBSlide_Common.Repositories
 {
     public interface IStudentRepository<TStudent> where TStudent : IStudent
     {
+        #region Login
+        public string? Login(string login);
+        #endregion
+
         #region Create
         public int Insert(TStudent student);
         #endregion

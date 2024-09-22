@@ -71,6 +71,7 @@
     <Build Include="StoredProcedures\SP_Student_Create.sql" />
     <Build Include="StoredProcedures\SP_Student_Delete.sql" />
     <Build Include="StoredProcedures\SP_Student_Update.sql" />
+    <Build Include="StoredProcedures\SP_Student_Login.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\InitialData.sql" />

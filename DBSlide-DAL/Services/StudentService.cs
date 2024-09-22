@@ -15,6 +15,25 @@ namespace DBSlide_DAL.Services
         public StudentService(IConfiguration configuration) : base(configuration, "DBSlideMVC")
         {
         }
+        #region LOGIN
+        public string? Login(string login)
+        {
+            using (SqlConnection connection = new SqlConnection(_ConnectionString))
+            {
+                using (SqlCommand command = connection.CreateCommand())
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = "SP_Student_Login";
+                    command.Parameters.AddWithValue("Login", login);
+
+                    connection.Open();
+
+                    object studentLogin = command.ExecuteScalar();
+                    return (studentLogin is DBNull) ? null : (string?)studentLogin;
+                }
+            }
+        }
+        #endregion
 
         #region CREATE
         public int Insert(Student student)
