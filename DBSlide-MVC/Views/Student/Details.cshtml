@@ -55,6 +55,9 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { StudentId = Model.StudentId }) |
+    @if (_Session.UserSession.Login == Model.Login)
+    {
+        <a asp-action="Edit" asp-controller="Student" asp-route-id="@(Model.StudentId)">Edit</a> @:|
+    }
     <a asp-action="Index">Back to List</a>
 </div>

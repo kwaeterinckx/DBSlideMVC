@@ -108,6 +108,10 @@ namespace DBSlide_MVC.Controllers
         public IActionResult Edit([FromRoute] int StudentId)
         {
             StudentDetailsModel model = _StudentRepository.Get(StudentId).ToDetails();
+            if (_SessionManager.UserSession.Login != model.Login)
+            {
+                return RedirectToAction("Index");
+            }
             return View(model);
         }
 
@@ -130,6 +134,10 @@ namespace DBSlide_MVC.Controllers
         public IActionResult Delete([FromRoute] int StudentId)
         {
             StudentListItemModel model = _StudentRepository.Get(StudentId).ToListItem();
+            if (_SessionManager.UserSession.Login != model.Login)
+            {
+                return RedirectToAction("Index");
+            }
             return View(model);
         }
 

@@ -13,6 +13,7 @@ namespace DBSlide_MVC.Mapper
             return new StudentListItemModel()
             {
                 StudentId = student.StudentId,
+                Login = student.Login,
                 FirstName = student.FirstName,
                 LastName = student.LastName
             };
