@@ -27,6 +27,7 @@ namespace DBSlide_BLL.Mapper
                 BirthDate = student.BirthDate,
                 Login = student.Login,
                 SectionId = student.SectionId,
+                SectionName = student.SectionName,
                 YearResult = student.YearResult,
                 CourseId = student.CourseId
             };

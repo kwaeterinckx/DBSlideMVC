@@ -13,6 +13,7 @@ namespace DBSlide_DAL.Entities
         public DateTime BirthDate { get; set; }
         public string Login { get; set; }
         public int SectionId { get; set; }
+        public string? SectionName { get; set; }
         public int? YearResult { get; set; }
         public string? CourseId { get; set; }
     }

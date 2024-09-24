@@ -21,6 +21,7 @@ namespace DBSlide_DAL.Mapper
                 BirthDate = (DateTime)record[nameof(Student.BirthDate)],
                 Login = (string)record[nameof(Student.Login)],
                 SectionId = (int)record[nameof(Student.SectionId)],
+                SectionName = (record[nameof(Student.SectionName)] is DBNull) ? null : (string?)record[nameof(Student.SectionName)],
                 YearResult = (record[nameof(Student.YearResult)] is DBNull) ? null : (int?)record[nameof(Student.YearResult)],
                 CourseId = (record[nameof(Student.CourseId)] is DBNull) ? null : (string?)record[nameof(Student.CourseId)]
             };

@@ -20,8 +20,11 @@ namespace DBSlide_MVC.Models.Student
         [DisplayName("Login")]
         public string Login { get; set; }
 
-        [DisplayName("Section")]
+        [ScaffoldColumn(false)]
         public int SectionId { get; set; }
+
+        [DisplayName("Section")]
+        public string? SectionName { get; set; }
 
         [DisplayName("Résultat annuel")]
         public int? YearResult { get; set; }

@@ -26,6 +26,7 @@ namespace DBSlide_BLL.Entities
             }
         }
         public int SectionId { get; set; }
+        public string? SectionName { get; set; }
         public int? YearResult { get; set; }
         public string? CourseId { get; set; }
 
@@ -56,6 +57,7 @@ namespace DBSlide_BLL.Entities
             BirthDate = student.BirthDate;
             _Login = student.Login;
             SectionId = student.SectionId;
+            SectionName = student.SectionName;
             YearResult = student.YearResult;
             CourseId = student.CourseId;
         }
